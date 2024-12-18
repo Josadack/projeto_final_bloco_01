@@ -40,6 +40,7 @@ while(true){
     console.log("         3 - Cadastrar Produto          ")
     console.log("         4 - Atulizar produto            ")
     console.log("         5 - Deletar Produto                       ")
+    console.log("         6 - Buscar por nome do Produto                              ")
     console.log("         0 - Sair                               ")
     console.log(colors.reset,colors.fg.yellowstrong,"\nEntre com a opção desejada: ",colors.fg.red)
     opcao = readlinesync.questionInt("") 
@@ -167,10 +168,21 @@ while(true){
 
             keyPress();
             break;
+
+            case 6:
+                console.log("\n\nBuscar por nome");
+            
+            console.log("\nDigite o nome do Produto:");
+            nome = readlinesync.question('')
+
+            produtos.procurarPorNome(nome);
+
+            keyPress();
+            break;
+
             default:
                 console.log(`${colors.fg.red}\n*ERRO*${colors.reset}${colors.fg.whitestrong} Opção inválida${colors.reset}`)
     }
-
 
     }
 }

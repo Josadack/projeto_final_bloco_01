@@ -57,6 +57,23 @@ export class ProdutosController implements ProdutosRepository{
         }
     }
 
+    procurarPorNome(nome: string): void {
+          //filtragem de dados
+          let buscaPorNome = this.listaProdutos.filter(pd => 
+            pd.nome.toUpperCase().includes(nome.toUpperCase())
+         )
+  
+         //Listagem  dos dados
+         if (buscaPorNome.length > 0) {  
+            buscaPorNome.forEach(pd => {  
+                pd.visualizar(); // Chama o método visualizar para cada produto encontrado  
+            });  
+        } else {  
+            console.log(colors.fg.redstrong,"Produto Não encontrado",colors.reset); // Mensagem se nenhum produto foi encontrado  
+        } 
+    }
+
+
 
     //Metodos Auxiliares
 

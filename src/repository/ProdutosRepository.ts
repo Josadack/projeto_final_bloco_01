@@ -8,4 +8,5 @@ export interface ProdutosRepository{
     cadastrarProduto(produto: Produtos):void;
     atualizarProduto(produto: Produtos):void;
     deletarProduto(id: number):void;
+    procurarPorNome(nome: string):void;
 }
