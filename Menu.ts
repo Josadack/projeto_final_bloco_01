@@ -72,7 +72,7 @@ while(true){
             break;
 
         case 3:
-            console.log("\n\nCadastrar Produto\n\n");
+            console.log("\n\nCadastrar Produto\n");
 
             console.log("\nDigite o nome do Produto")
                 nome = readlinesync.question('');
