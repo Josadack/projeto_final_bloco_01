@@ -5,12 +5,12 @@ export abstract class Produtos{
     //Atributos
    private _id:number;
    private _nome:string;
-   private _preco:string;
+   private _preco:number;
    private _tipo:number;
 
 
    //Metodo Cosntrutor
-	constructor(id: number, nome: string, preco: string, tipo: number) {
+	constructor(id: number, nome: string, preco: number, tipo: number) {
 		this._id = id;
 		this._nome = nome;
 		this._preco = preco;
@@ -26,7 +26,7 @@ export abstract class Produtos{
 		return this._nome;
 	}
 
-	public get preco(): string {
+	public get preco(): number {
 		return this._preco;
 	}
 
@@ -45,7 +45,7 @@ export abstract class Produtos{
 	}
 
 
-	public set preco(value: string) {
+	public set preco(value: number) {
 		this._preco = value;
 	}
 

@@ -8,7 +8,7 @@ export class Eletronicos extends Produtos{
     private _capacidade: number; 
 
 
-	constructor( id: number, nome: string, preco: string, tipo: number,marca: string, modelo: string, capacidade: number) {
+	constructor( id: number, nome: string, preco: number, tipo: number, marca: string, modelo: string, capacidade: number) {
         super(id, nome, preco, tipo);
 		this._marca = marca;
 		this._modelo = modelo;
@@ -47,7 +47,7 @@ export class Eletronicos extends Produtos{
     public visualizar(): void {
         super.visualizar();
         console.log(colors.fg.gray,'-----------------------------',)
-        console.log(colors.fg.magentastrong,` ID do produto: ${this._marca}`)
+        console.log(colors.fg.greenstrong,` Marca do Produto: ${this._marca}`)
         console.log(` Nome do produto: ${this._modelo}`)
         console.log(` Preço do produto: ${this._capacidade}`,colors.reset)
     }

@@ -9,7 +9,7 @@ export class Software extends Produtos{
 
 
     //Metodo construtor
-	constructor(id: number, nome: string, preco: string, tipo: number,plataforma: string, licenca: string) {
+	constructor(id: number, nome: string, preco: number, tipo: number,plataforma: string, licenca: string) {
         super(id, nome, preco, tipo)
 		this._plataforma = plataforma;
 		this._licenca = licenca;
@@ -42,7 +42,7 @@ export class Software extends Produtos{
      public visualizar(): void {
             super.visualizar();
             console.log(colors.fg.gray,'-----------------------------',)
-            console.log(colors.fg.magentastrong,` ID do produto: ${this._plataforma}`)
-            console.log(` Preço do produto: ${this._licenca}`,colors.reset)
+            console.log(colors.fg.greenstrong,` Pataforma : ${this._plataforma}`)
+            console.log(` Licença do produto: ${this._licenca}`,colors.reset)
         }
 }
